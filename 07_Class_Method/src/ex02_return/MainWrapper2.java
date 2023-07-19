@@ -1,7 +1,7 @@
 package ex02_return;
 
 public class MainWrapper2 {
-  
+  // 메소드 = 기능 , 하고싶은 기능을 하나마다 메소드를 생성
   /*
    void 메소드의 return
    1. 반환값이 없는 메소드는 void 키워드를 사용한다.
