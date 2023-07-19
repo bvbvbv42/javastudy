@@ -14,10 +14,12 @@ public class MainWrapper {
     int month = 12;
     String[] seasons = {"겨울", "봄", "여름", "가을"};
     // 코드 1줄로 해결할 것
+    /*
     System.out.println(seasons[0]);  // 겨울
     System.out.println(seasons[1]);  // 봄
     System.out.println(seasons[2]);  // 여름
     System.out.println(seasons[3]);  // 가을
+    */
     System.out.println(seasons[month % 12 / 3]);
   }
   
