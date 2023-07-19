@@ -6,7 +6,7 @@ public class MainWrapper3 {
    말 줄임표(ellipsis)
      1. 메소드를 전달하는 인수의 타입이 동일하지만, 갯수가 여러 개인 경우에 사용할 수 있다.
      2. 말 줄임표(...)를 활용한다.
-     3. 말 줄임표로 선언된 변수는 배열로 처리한다.
+     3. 말 줄임표로 선언된 변수는 *****배열로 처리한다.*****
    */
   
   public static void main(String[] args) {
