@@ -3,6 +3,7 @@ package ex;
 public class MainWrapper4 {
   
   // void : 리턴이 없다.
+  
   public static void ex01(){
     
     System.out.println("리턴이 없는 ex01");

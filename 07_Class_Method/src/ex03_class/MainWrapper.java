@@ -4,7 +4,7 @@ public class MainWrapper {
 
   public static void main(String[] args) {
 
-    // Calculator 객체 선언
+    // Calculator 객체 선언 , ( 배열 선언, 생성과 같다고 보면 됨)
     Calculator myCalc; 
     
     // Calculator 객체 생성
