@@ -17,7 +17,7 @@ public class MainWrapper {
     Contact contact = new Contact();
     // 정보 추가 (Setter 활용)
     
-    contact.setHomeTel("1234-5678"); 
+    contact.sethomeTel("1234-5678"); 
     contact.setMobile("010-1234-5678"); 
     contact.setAddress(address);
 

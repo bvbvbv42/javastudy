@@ -13,7 +13,7 @@ public class Address {
 }
   
  // Setter
-  public void setPostcode(String postCode) {
+  public void setPostcode(String postcode) {
     this.postCode = postCode;
   }
   

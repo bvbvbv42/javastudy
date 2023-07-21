@@ -12,7 +12,7 @@ public class Contact {
   }
   
   // Setter
-  public void setHomeTel(String homeTel) {
+  public void sethomeTel(String homeTel) {
     this.homeTel = homeTel;
   }
   
@@ -20,8 +20,8 @@ public class Contact {
     this.mobile = mobile;
   }
   
-  public void setAddress(Address address) {
-    this.address = address;
+  public void setAddress(Address abc) {
+    this.address = abc;
   }
   
   // Getter
