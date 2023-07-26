@@ -1,5 +1,7 @@
 package ex08_Bakery;
 
+import ex04_Singer.Song;
+
 public class Customer {
   
   private int count;  // 빵을 몇 개 샀는가?
@@ -34,7 +36,7 @@ public class Customer {
   public void buy(Bakery bakery, int count, int money) {
     
     // bakery에 count와 money를 전달하고 빵과 잔돈을 받는다.
-    BreadChange bc = bakery.sell(count, money);
+    BreadChange bc = bakery.sell(count, money);    // bc = new BreadChange(count, money - count * PRICE);
     
     // 구매 처리
     if(bc != null) {
