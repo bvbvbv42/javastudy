@@ -13,7 +13,7 @@ public class MainWrapper {
     // int를 저장하는 box2
     // 오직 "참조타입"만 Generic 처리에서 사용할 수 있다.
     // int의 참조타입인 Integer를 사용한다.
-    Box<Integer> box2 = new Box<Integer>();
+    Box<Integer> box2 = new Box<Integer>();     //new Box(<Integer>)();   ()생략가능
     box2.setItem(15);
     System.out.println(box2.getItem());
     
