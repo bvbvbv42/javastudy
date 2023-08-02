@@ -1,3 +1,4 @@
+
 package ex01_generic;
 
 public class MainWrapper {
