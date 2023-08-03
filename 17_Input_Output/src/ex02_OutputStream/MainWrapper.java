@@ -205,7 +205,7 @@ public class MainWrapper {
       String school = "가산대학교";
       
       // 출력(파일로 데이터 보내기)
-      dout.writeChars(name);
+      dout.writeChars(name);      // dout.wruteChar('t'), dout.wruteChar('o'), dout.wruteChar('m')
       dout.writeInt(age);
       dout.writeDouble(height);
       dout.writeUTF(school);
@@ -255,7 +255,7 @@ public class MainWrapper {
       oout = new ObjectOutputStream(new FileOutputStream(file));
       
       // 출력할 데이터(파일로 보낼 데이터)
-      String name = "tom";
+      String name = "tom";        
       int age = 50;
       double height = 180.5;
       String school = "가산대학교";
