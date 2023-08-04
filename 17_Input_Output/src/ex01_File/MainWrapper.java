@@ -118,7 +118,7 @@ public class MainWrapper {
     StringBuilder sb = new StringBuilder();
     
     // File 객체 이름 
-    sb.append(String.format("%-15s", file.getName()));
+    sb.append(String.format("%-7s", file.getName()));
     
     // File 객체 최종수정일
     long lastModified = file.lastModified();
