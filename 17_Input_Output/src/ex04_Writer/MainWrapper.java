@@ -1,9 +1,14 @@
 package ex04_Writer;
 
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 public class MainWrapper {
@@ -35,8 +40,8 @@ public class MainWrapper {
       
       // 파일출력스트림 생성(반드시 예외 처리가 필요한 코드)
       
-      // 1. 생성모드 : 언제나 새로 만든다.(덮어쓰기)    new FileOutputStream(file)
-      // 2. 추가모드 : 새로 만들거나, 기존 파일에 추가한다.            new FileOutputStream(file, true)
+      // 1. 생성모드 : 언제나 새로 만든다.(덮어쓰기)        new FileWriter(file)
+      // 2. 추가모드 : 새로 만들거나, 기존 파일에 추가한다. new FileWriter(file, true)
       fw = new FileWriter(file);
       
       // 출력할 데이터(파일로 보낼 데이터)
@@ -66,6 +71,7 @@ public class MainWrapper {
     
   }
 
+  
   public static void ex02() {
     
     /*
@@ -118,6 +124,7 @@ public class MainWrapper {
     
   }
   
+  
   public static void ex03() {
     
     /*
@@ -165,9 +172,58 @@ public class MainWrapper {
     
   }
   
-  public static void main(String[] args) {
-    ex03();
+  
+  public static void ex04() {
     
+    // 바이트 출력스트림으로 보낸 문자를 바이트 입력스트림으로 읽기(한글 실패)
+    // 바이트 출력스트림으로 보낸 문자를 문자 입력스트림으로 읽기(한글 성공)
+    
+    // 1단계. 바이트 출력스트림으로 문자 보내기
+    File dir = new File("C:/storage");
+    if(dir.exists() == false) {
+      dir.mkdirs();
+    }
+    File file = new File(dir, "server.dat");
+    BufferedOutputStream bout = null;
+    try {
+      bout = new BufferedOutputStream(new FileOutputStream(file));
+      String s1 = "안녕하세용";
+      String s2 = "Hello";
+      bout.write(s1.getBytes("UTF-8"));
+      bout.write(s2.getBytes("UTF-8"));
+      bout.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+   
+    // 2단계. 문자 입력스트림으로 읽기
+    /*
+     java.io.InputStreamReader 클래스 
+     1. Reader 클래스를 상속 받는 클래스이다. (문자 입력스트림이다.)
+     2. InputStream(바이트 입력스트림)을 받아서 Reader(문자 입력스트림)으로 변환한다.
+     */
+    BufferedReader br = null;
+    try {
+      br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+      String line = null;
+      StringBuffer sb = new StringBuffer();
+      while((line = br.readLine()) != null){
+        sb.append(line + "\n");
+      }
+      System.out.println(sb.toString());
+      br.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    
+  
+  
+  
+  }
+  
+  public static void main(String[] args) {
+    ex04
+    ();
   }
 
 }
