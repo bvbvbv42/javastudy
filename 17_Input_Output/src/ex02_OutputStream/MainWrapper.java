@@ -26,7 +26,7 @@ public class MainWrapper {
      */
     
     // 디렉터리를 File 객체로 만들기
-    File dir = new File("C:/storage");
+    File dir = new File("C:/Storage");
     if(!dir.exists()) {
       dir.mkdirs();
     }
@@ -297,7 +297,7 @@ public class MainWrapper {
   
   public static void main(String[] args) {
 
-    ex05();
+    ex01();
     
   }
 
