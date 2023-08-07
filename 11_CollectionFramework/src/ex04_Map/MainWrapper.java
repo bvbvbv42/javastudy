@@ -49,7 +49,7 @@ public static void ex01() {
 }
   
 
-  public static void ex02() {
+ public static void ex02() {
     
     // HashMap 선언 & 생성                          Person객체 생성과 똑같다.
     
@@ -73,7 +73,8 @@ public static void ex01() {
     System.out.println(Person.get("age"));
   }
 
-  public static void ex03() {
+ 
+ public static void ex03() {
     
     // HashMap 선언 & 생성
     Map<String, Object> map = new HashMap<String, Object>();
@@ -101,7 +102,10 @@ public static void ex01() {
     }
   }
   
-  public static void ex04() {
+  
+ 
+ 
+ public static void ex04() {
     
     // HashMap 선언 & 생성 
     Map<String, Object> map = new HashMap<String, Object>();
