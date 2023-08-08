@@ -12,10 +12,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class MainWrapper {
+public class Ex02_PublicData_Air_Korea {
 
-  public static void ex01() {
-  
+  public static void main(String[] args) {
+
     /*
      * 한국환경공단 에어코리아 대기오염정보 - 시도별 실시간 측정정보 조회
      * 1. 요청주소 : http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty
@@ -35,8 +35,8 @@ public class MainWrapper {
     
     try {
       
-      String spec = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth";
-      String serviceKey = "RiGyTQfngECP1VUkP551ma4SAk7q5X/IcRYP16H5bigP2LNWnbndsUlM46L9UiBamVTrTLP+LgapDNGGrVUCag==";
+      String spec = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty";
+      String serviceKey = "bEQBRPHjt0tZrc7EsL0T8usfsZ1+wT+5jqamBef/ErC/5ZO6N7nYdRmrwR91bh5d3I1AQeY5qdbJOF6Kv0U1CQ==";
       String returnType = "xml";
       String numOfRows = "100";
       String pageNo = "1";
@@ -95,11 +95,7 @@ public class MainWrapper {
         e.printStackTrace();
       }
     }
-    
+
   }
-  
-  public static void main(String[] args) {
-    ex01();
-  }
-  
+
 }

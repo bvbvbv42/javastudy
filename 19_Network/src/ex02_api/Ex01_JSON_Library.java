@@ -8,28 +8,28 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class JSON_Library {
+public class Ex01_JSON_Library {
 
   /*
-   JSON 공식 홈페이지 
-   1. 링크 : https://www.json.org
-   2. Java 라이브러리 다운로드
-      JSON-Java 라이브러리
+   * JSON 공식 홈페이지
+   * 1. 링크 : https://www.json.org/
+   * 2. Java 라이브러리 다운로드
+   *    JSON-Java 라이브러리
    */
   
   /*
-   JSON
-   1. JavaScript Object Notation
-   2. 자바스크립트 객체 표기법
-   3. 객체는 중괄호 {}로 묶어서 표기한다.
-   4. 배열은 대괄호 []로 묶어서 표기한다. 
-   5. 속성(property)과 값(value)를 콜론(:)으로 구분하여 작성한다.
+   * JSON
+   * 1. JavaScript Object Notation
+   * 2. 자바스크립트 객체 표기법
+   * 3. 객체는 중괄호 {}로 묶어서 표기한다.
+   * 4. 배열은 대괄호 []로 묶어서 표기한다.
+   * 5. 속성(property)과 값(value)를 콜론(:)으로 구분하여 작성한다. 
    */
   
   /*
-   JSON-Java 라이브러리에서 제공하는 클래스
-   1. JSONObject 클래스 : 객체 처리용 클래스
-   2. JSONArray  클래스 : 배열 처리용 클래스
+   * JSON-Java 라이브러리에서 제공하는 클래스
+   * 1. JSONObject 클래스 : 객체 처리용
+   * 2. JSONArray  클래스 : 배열 처리용
    */
   
   public static void ex01() {
@@ -45,7 +45,6 @@ public class JSON_Library {
     System.out.println(obj.toString());
     
   }
-  
   
   public static void ex02() {
     
@@ -65,35 +64,34 @@ public class JSON_Library {
     
     // 배열
     JSONArray array = new JSONArray();
-    array.put(obj1);          // put : 저장하는 메소드 이름
+    array.put(obj1);
     array.put(obj2);
     
     // 배열 확인
     System.out.println(array.toString());
+    
   }
-  
-  
+
   public static void ex03() {
     
     // String 형식의 JSON 객체 분석하기
     String str = "{\"name\":\"tom\",\"age\":50,\"height\":180.5}";
     
-    // String - > JSONObject 객체로 변환
+    // String -> JSONObject 객체로 변환
     JSONObject obj = new JSONObject(str);
-  
-    // 원하는 Key(property)를 가져오기
-    String name = obj.getString("name");         // String name = (String)obj.get("name");                     
-    int age = obj.getInt("age");                // int age = (int)obj.get("age");
-    double height = obj.getDouble("height");    // double height = (double)obj.get("height");
+    
+    // 원하는 Key(Property)를 가져오기
+    String name = obj.getString("name");     // String name = (String)obj.get("name");
+    int age = obj.getInt("age");             // int age = (int)obj.get("age");
+    double height = obj.getDouble("height"); // double height = (double)obj.get("height");
     
     // 결과 확인
     System.out.println(name);
     System.out.println(age);
     System.out.println(height);
-  
+    
   }
   
- 
   public static void ex04() {
     
     // String 형식의 JSON 배열 분석하기
@@ -103,7 +101,7 @@ public class JSON_Library {
     JSONArray array = new JSONArray(str);
     
     // 일반 for문
-    for(int i=0, length = array.length(); i < length; i++) {
+    for(int i = 0, length = array.length(); i < length; i++) {
       JSONObject obj = array.getJSONObject(i);
       String name = obj.getString("name");
       int age = obj.getInt("age");
@@ -120,16 +118,13 @@ public class JSON_Library {
       System.out.println(name + ", " + age + ", " + height);
     }
     
-    
   }
-
   
   public static void ex05() {
     
-    //Map -> JSONObject 변환하기
+    // Map -> JSONObject 변환하기
     
-    
-    //Map
+    // Map
     Map<String, Object> map = new HashMap<String, Object>();
     map.put("name", "tom");
     map.put("age", 50);
@@ -150,10 +145,9 @@ public class JSON_Library {
     
   }
   
-  
   public static void ex06() {
     
-   // List -> JSONArray 변환
+    // List -> JSONArray 변환
     
     // Map 2개 (사람 2명)
     Map<String, Object> map1 = new HashMap<String, Object>();
@@ -182,11 +176,9 @@ public class JSON_Library {
     }
     
   }
+  
   public static void main(String[] args) {
-      
-    
     ex01();
-    
   }
 
 }
